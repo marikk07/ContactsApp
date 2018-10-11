@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z5f-Rw-kdZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contact List Screen View Controller-->
+        <scene sceneID="6bF-mP-pbh">
+            <objects>
+                <viewController id="Z5f-Rw-kdZ" customClass="ContactListScreenViewController" customModule="ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I0B-Lq-iCT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="YwC-zw-pJo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Z5f-Rw-kdZ" id="k3W-TI-8BZ"/>
+                                    <outlet property="delegate" destination="Z5f-Rw-kdZ" id="Ubq-Db-0ke"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lgZ-bJ-fne" firstAttribute="trailing" secondItem="YwC-zw-pJo" secondAttribute="trailing" id="5vS-fR-U4t"/>
+                            <constraint firstItem="lgZ-bJ-fne" firstAttribute="bottom" secondItem="YwC-zw-pJo" secondAttribute="bottom" id="6QE-nj-fEO"/>
+                            <constraint firstItem="YwC-zw-pJo" firstAttribute="top" secondItem="lgZ-bJ-fne" secondAttribute="top" id="He8-98-Um9"/>
+                            <constraint firstItem="YwC-zw-pJo" firstAttribute="leading" secondItem="I0B-Lq-iCT" secondAttribute="leading" id="z6b-EM-auM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lgZ-bJ-fne"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="YwC-zw-pJo" id="uNT-O6-65b"/>
+                        <segue destination="BmM-jY-osd" kind="show" identifier="editScreen" id="2VC-Gu-vKj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dr5-JZ-QE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="TrF-rn-Iuy" customClass="ContactListScreenModuleInitializer" customModule="ContactsApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="contactListScreenViewController" destination="Z5f-Rw-kdZ" id="bKr-AH-7RO"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="63" y="117"/>
+        </scene>
+        <!--ContactEditScreen-->
+        <scene sceneID="rZe-Da-kAt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ContactEditScreen" id="BmM-jY-osd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsU-Qx-Awl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="117"/>
+        </scene>
+    </scenes>
+</document>
