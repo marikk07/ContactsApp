@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Swizzle prepare(for:segue:)
         let _ = UIViewController.swizzlePrepareForSegue
         
-        
         //Window Settings
         let window = UIWindow(frame: UIScreen.main.bounds)
         let storyboardId: String = Const.Storyboard.contactsList

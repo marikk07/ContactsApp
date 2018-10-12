@@ -31,7 +31,6 @@ class ContactListScreenModuleConfigurator {
         dataBaseService.output = interactor
         interactor.dataBaseService = dataBaseService
         
-        
         presenter.interactor = interactor
         viewController.output = presenter
     }

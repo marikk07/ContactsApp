@@ -30,6 +30,4 @@ class ContactListCell: UITableViewCell {
         addressLabel.text = input.streetAddress1
         phoneLabel.text = input.phoneNumber
     }
-
-    
 }

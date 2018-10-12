@@ -34,7 +34,6 @@ class ContactListScreenInteractor: ContactListScreenInteractorInput {
     func removeContactWith(id: String) {
         self.dataBaseService.deleteContactWithId(id)
     }
-    
 }
 
 extension ContactListScreenInteractor: DataBaseServiceOutput {

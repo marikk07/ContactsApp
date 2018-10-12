@@ -12,7 +12,6 @@ import CoreData
 final class CoreDataStack {
     
     // MARK: - Properties
-    
     lazy var applicationDocumentsDirectory: URL = {
         return NSPersistentContainer.defaultDirectoryURL()
     }()
@@ -40,13 +39,11 @@ final class CoreDataStack {
         }()
     
     // MARK: - Initializers
-    
     init() {
         saveContext(context: managedObjectContext)
     }
     
     // MARK: - Public Methods
-    
     func performBackgroundTask(_ block: @escaping (NSManagedObjectContext) -> Void) {
         self.persistentStoreContainer.performBackgroundTask(block)
     }

@@ -14,7 +14,6 @@ class ContactListScreenModuleInitializer: NSObject {
     @IBOutlet weak var contactListScreenViewController: ContactListScreenViewController!
 
     override func awakeFromNib() {
-
         let configurator = ContactListScreenModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: contactListScreenViewController)
     }

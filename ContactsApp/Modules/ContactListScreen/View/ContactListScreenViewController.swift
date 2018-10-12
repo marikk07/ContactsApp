@@ -20,7 +20,6 @@ class ContactListScreenViewController: UIViewController, ContactListScreenViewIn
     var output: ContactListScreenViewOutput!
     private var contactsData: [Contact] = []
     
-    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +27,6 @@ class ContactListScreenViewController: UIViewController, ContactListScreenViewIn
         registerNibs()
         setupView()
     }
-
 
     // MARK: ContactListScreenViewInput
     func setupInitialState() {
@@ -59,7 +57,6 @@ class ContactListScreenViewController: UIViewController, ContactListScreenViewIn
     @objc func actionAddButtonTouchUpInside(_ sender: UIBarButtonItem) {
         self.output.addButtonTouched()
     }
-
 }
 
 extension ContactListScreenViewController: UITableViewDataSource, UITableViewDelegate {

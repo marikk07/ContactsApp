@@ -14,7 +14,6 @@ class ContactEditScreenModuleInitializer: NSObject {
     @IBOutlet weak var contactEditScreenViewController: ContactEditScreenViewController!
 
     override func awakeFromNib() {
-
         let configurator = ContactEditScreenModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: contactEditScreenViewController)
     }

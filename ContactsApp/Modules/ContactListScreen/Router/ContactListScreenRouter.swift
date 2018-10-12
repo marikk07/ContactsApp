@@ -21,7 +21,6 @@ class ContactListScreenRouter: ContactListScreenRouterInput {
         self.transitionHandler.openModuleUsingSegue(Const.Segue.editScreen, to: ContactEditScreenModuleInput.self) { (moduleInput) in
             moduleInput.delegate = delegate
             moduleInput.inputContact = input
-            
         }
     }
 }

@@ -102,7 +102,6 @@ class DataBaseService: DataBaseServiceInput, DependencyInjector {
         } catch let error as NSError  {
             print("Could delete \(error), \(error.userInfo)")
         }
-        
     }
 }
 

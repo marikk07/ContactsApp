@@ -9,7 +9,6 @@
 // MARK: - Class
 class ContactEditScreenPresenter: ContactEditScreenModuleInput, ContactEditScreenViewOutput, ContactEditScreenInteractorOutput {
     
-
     // MARK: - Viper properties
     weak var view: ContactEditScreenViewInput!
     var interactor: ContactEditScreenInteractorInput!
@@ -21,7 +20,6 @@ class ContactEditScreenPresenter: ContactEditScreenModuleInput, ContactEditScree
     weak var delegate: ContactEditScreenDelegate? {
         didSet { self.interactor.delegate = delegate }
     }
-    
     
     // MARK: - Init
     init(view: ContactEditScreenViewInput, router: ContactEditScreenRouterInput) {
@@ -46,6 +44,4 @@ class ContactEditScreenPresenter: ContactEditScreenModuleInput, ContactEditScree
     func closeModule() {
         self.router.closeModule()
     }
-    
-
 }
